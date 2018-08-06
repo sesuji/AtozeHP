@@ -1,0 +1,65 @@
+html {
+    visibility: hidden;
+}
+
+.wf-active {
+    visibility: visible;
+}
+
+html,
+body {
+    font-family: 'body';
+    color: #351b04;
+    background-color: #d9c9b0;
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+}
+
+header {
+    font-family: 'header';
+}
+
+ul {
+    padding: 0px;
+}
+
+/* HEADER */
+
+nav {
+    width: 100%;
+}
+
+nav ul {
+    display: flex;
+    /*justify-content: space-between;*/
+}
+
+nav li {
+    list-style-type: none;
+    flex-grow: 1;
+    text-align: center;
+}
+
+nav li+li {
+    border-left: 1px solid #000;
+    border-left: 1px solid #333;
+}
+
+/* FOOTER */
+
+footer .footer_copyright {
+    text-align: center;
+    font-family: 'メイリオ', sans-serif;
+}
+
+@font-face {
+    font-family: 'header';
+    /* src: url('../font/Base\ 02.ttf'); */
+    src: url('../font/MASTERPLAN___.ttf');
+}
+
+@font-face {
+    font-family: 'body';
+    src: url('../font/Vinta.ttf');
+}
