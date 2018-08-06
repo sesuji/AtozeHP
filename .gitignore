@@ -1,0 +1,40 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# compiled output
+atoze-page/dist
+atoze-page/tmp
+atoze-page/out-tsc
+
+# dependencies
+atoze-page/node_modules
+
+# IDEs and editors
+atoze-page/.idea
+atoze-page/.project
+atoze-page/.classpath
+atoze-page/.c9/
+*.launch
+atoze-page/.settings/
+*.sublime-workspace
+
+# IDE - VSCode
+atoze-page/.vscode/*
+!atoze-page/.vscode/settings.json
+!atoze-page/.vscode/tasks.json
+!atoze-page/.vscode/launch.json
+!atoze-page/.vscode/extensions.json
+
+# misc
+atoze-page/.editorconfig
+atoze-page/.sass-cache
+atoze-page/connect.lock
+atoze-page/coverage
+atoze-page/libpeerconnection.log
+atoze-page/npm-debug.log
+atoze-page/yarn-error.log
+atoze-page/testem.log
+atoze-page/typings
+
+# System Files
+.DS_Store
+Thumbs.db
