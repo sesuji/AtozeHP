@@ -1,0 +1,85 @@
+.detail {
+    &_specs {
+        margin: 0 auto;
+        margin: 0 10px;
+        &_name {
+            
+            &_main {
+                display: table-cell;
+                font-size: 37.5px;
+                font-size: 10vw;
+                line-height: 37.5px;
+                line-height: 10vw;
+                font-family: 'Hind Vadodara', "NotoSans-bold", sans-serif;
+                font-weight: 700;
+                -webkit-font-smoothing: antialiased;
+                vertical-align: middle;
+                padding-right: 30px;
+                padding-right: 8vw;
+                position: relative;
+                white-space: nowrap;
+            }
+            /*
+            &_main:after {
+                content: '／';
+                display: block;
+                font-size: 37.5px;
+                font-size: 10vw;
+                line-height: 37.5px;
+                line-height: 10vw;
+                width: 32.5px;
+                width: 8.66667vw;
+                height: 100%;
+                position: absolute;
+                right: 0px;
+                top: 0px;
+                z-index: 0;
+                right: 0.26667vw;
+                right: 4px;
+                top: 2px;
+                top: 0.53333vw;
+                text-align: center;
+            }
+            */
+
+            &_kana {
+                font-size: 10px;
+                font-size: 2.66667vw;
+                display: block;
+                line-height: 1.0em;
+                margin-top: 10px;
+                /*
+                display: block;
+                font-size: 10px;
+                font-size: 2.66667vw;
+                line-height: 1em;
+                margin-top: 5px;
+                margin-top: 1.33333vw;
+                margin-left: -5px;
+                margin-left: -1.33333vw;
+                */
+            }
+        }
+        &_profile {
+            display: table;
+            width: 100%;
+            font-size: 14px;
+            font-size: 3.73333vw;
+            &_r {
+                display: table-cell;
+            }
+            &_l {
+                display: table-cell;
+            }
+            i {
+                display: table-cell;
+                width: 100%;
+                position: relative;
+            }
+        }
+        &_text {
+            font-size: 14px;
+            font-size: 3.73333vw;
+        }
+    }
+}

@@ -16,6 +16,7 @@ atoze-page/.c9/
 *.launch
 atoze-page/.settings/
 *.sublime-workspace
+*/node_modules
 
 # IDE - VSCode
 atoze-page/.vscode/*
