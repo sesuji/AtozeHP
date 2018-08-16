@@ -65,9 +65,14 @@ nav li+li {
 }
 
 /* CONTENT */
+
 .content {
-    margin: 20px;
-    margin-top: 50px; /* For Menu */
+    margin-top: 5em;
+    /* For Menu */
+}
+
+section {
+    padding: 20px;
 }
 
 /* FOOTER */

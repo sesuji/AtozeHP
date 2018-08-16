@@ -1,0 +1,14 @@
+section {
+    height: 100vh;
+}
+
+#character {
+    background: red;
+}
+
+#about {
+}
+
+.header.invisible{
+    display: none;
+}
