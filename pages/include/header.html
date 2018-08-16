@@ -1,16 +1,26 @@
 <header class="header" id="header">
-    <ul>
-        <li>
-            <a href="{$root}index.html">TOP</a>
-        </li>
-        <li>
-            <a href="{$root}character">C</a>
-        </li>
-        <li>
-            <a href="{$root}world">W</a>
-        </li>
-        <li>
-            <a href="{$root}link">LINK</a>
-        </li>
-    </ul>
+    <div class="logo">
+        <a href="{$root}">LOGO</a>
+    </div>
+    <div class="menu-trigger-container">
+        <a class="menu-trigger" onclick="onClickMenu()" href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+        </a>
+    </div>
+    <nav class="menu">
+        <ul>
+            <li>
+                <a href="{$root}character">CHARACTER</a>
+                <a href="#character">CHARACTER</a>
+            </li>
+            <li>
+                <a href="{$root}world">WORLD</a>
+            </li>
+            <li>
+                <a href="{$root}link">LINK</a>
+            </li>
+        </ul>
+    </nav>
 </header>

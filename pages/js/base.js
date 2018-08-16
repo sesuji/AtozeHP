@@ -1,9 +1,14 @@
+function onClickMenu() {
+  Array.from(document.getElementsByClassName("menu-trigger")).forEach(val => val.classList.toggle("active"));
+  Array.from(document.getElementsByClassName("menu")).forEach(val => val.classList.toggle("open"));
+}
+
 WebFont.load({
   custom: {
     families: ['header', 'body'],
   },
-  active: function() {},
-  fontactive: function(font_family) {
+  active: function () { },
+  fontactive: function (font_family) {
     // document.getElementById(font_family).classList.add('wf-active');
     /*
     if (font_family === 'header') {
@@ -19,7 +24,7 @@ WebFont.load({
     }
     */
   },
-  fontinactive: function(font_family) {
+  fontinactive: function (font_family) {
     document.getElementById(font_family).classList.add('wf-active');
     /*
     if (font_family === 'header') {
