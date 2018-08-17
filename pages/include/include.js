@@ -5,9 +5,9 @@ function header(rootDir) {
     cache: false,
     async: false,
     dataType: 'html',
-    success: function(html) {
+    success: function (html) {
       html = html.replace(/\{\$root\}/g, rootDir);
-      document.write(html);
+      document.getElementById('include-header').innerHTML = html;
     },
   });
 }
@@ -19,9 +19,9 @@ function footer(rootDir) {
     cache: false,
     async: false,
     dataType: 'html',
-    success: function(html) {
+    success: function (html) {
       html = html.replace(/\{\$root\}/g, rootDir);
-      document.write(html);
+      document.getElementById('include-footer').innerHTML = html;
     },
   });
 }

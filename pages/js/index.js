@@ -13,6 +13,8 @@ if (navigator.userAgent.toLowerCase().match(/webkit|msie 5/)) {
 if (nextContent.getBoundingClientRect().top > 0) {
     document.getElementById("header").classList.add("invisible");
     isOver = false;
+} else {
+    isOver = true;
 }
 
 // 指定要素のスクロール量取得

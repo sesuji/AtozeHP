@@ -1,14 +1,40 @@
-section {
+@charset "UTF-8";
+section .section-content {
+  margin: 0px 20px 20px;
+  padding: 0px;
+}
+
+section .section-content-body {
+  margin: 6px;
+}
+
+section#about h3::before {
+  content: '◆';
+  font-size: 10px;
+  display: inline-block;
+  position: relative;
+  top: -2px;
+}
+
+section#about h3 {
+  margin: 0px 0px 6px;
+}
+
+@media screen and (max-width: 640px) {
+  section {
     height: 100vh;
-}
-
-#character {
+  }
+  section .section-content {
+    font-size: 14px;
+  }
+  section .section-content-title {
+    font-size: 16px;
+  }
+  #character {
     background: red;
-}
-
-#about {
-}
-
-.header.invisible{
+  }
+  .header.invisible {
     display: none;
+  }
 }
+/*# sourceMappingURL=index.css.map */

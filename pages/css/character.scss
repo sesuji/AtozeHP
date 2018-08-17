@@ -1,13 +1,36 @@
 .detail {
+    &#dark {
+        background-color: rgb(100, 100, 100);
+        color: rgb(255, 255, 255);
+    }
+    &#fire {
+        background-color: rgb(145, 20, 20);
+    }
+    &#wind {
+        background-color: rgb(51, 138, 17);
+    }
+    &#water {
+        background-color: rgb(20, 85, 145);
+    }
+    &#ice {
+        background-color: rgb(20, 85, 145);
+    }
+    &#earth {
+        background-color: rgb(185, 130, 9);
+    }
+    &#thunder {
+        color: black;
+        background-color: rgb(255, 196, 0);
+    }
     &_specs {
         margin: 0 auto;
         margin: 0 10px;
         &_name {
-            
             &_main {
                 display: table-cell;
-                font-size: 37.5px;
-                font-size: 10vw;
+                /*font-size: 37.5px;*/
+                /*font-size: 10vw;*/
+                font-size: 21px;
                 line-height: 37.5px;
                 line-height: 10vw;
                 font-family: 'Hind Vadodara', "NotoSans-bold", sans-serif;
@@ -41,7 +64,6 @@
                 text-align: center;
             }
             */
-
             &_kana {
                 font-size: 10px;
                 font-size: 2.66667vw;
