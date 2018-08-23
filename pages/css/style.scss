@@ -1,5 +1,4 @@
 @import "variables";
-
 html {
     visibility: hidden;
 }
@@ -30,6 +29,9 @@ header {
     left: 15px;
     display: flex;
     align-items: center;
+    a {
+        text-shadow: 1px 1px 0 #fff, -1px 1px 0 #fff, 1px -1px 0 #fff, -1px -1px 0 #fff; // 下
+    }
 }
 
 ul {

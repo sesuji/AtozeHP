@@ -35,6 +35,10 @@ header {
           align-items: center;
 }
 
+header a {
+  text-shadow: 1px 1px 0 #fff, -1px 1px 0 #fff, 1px -1px 0 #fff, -1px -1px 0 #fff;
+}
+
 ul {
   margin: 0px;
   padding: 0px;

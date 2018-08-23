@@ -29,6 +29,15 @@
   background-color: #ffc400;
 }
 
+.detail_img {
+  width: 100%;
+}
+
+.detail_img img {
+  width: 100%;
+  opacity: 0.1;
+}
+
 .detail_specs {
   margin: 0 auto;
   margin: 0 10px;
