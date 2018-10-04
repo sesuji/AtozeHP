@@ -20,7 +20,6 @@ if (nextContent.getBoundingClientRect().top > 0) {
 // 指定要素のスクロール量取得
 topContent.onscroll = function () {
     let positionTop = this.scrollTop;
-    console.log(positionTop);
 };
 
 // ウィンドウのスクロール量取得

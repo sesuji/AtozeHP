@@ -1,114 +1,102 @@
-.detail {
+$dark: rgb(100, 100, 100);
+$light: rgb(100, 100, 100);
+$fire: rgb(145, 20, 20);
+$wind: rgb(51, 138, 17);
+$water: rgb(20, 85, 145);
+$ice: rgb(20, 85, 145);
+$earth: rgb(185, 130, 9);
+$thunder:rgb(255, 196, 0);
+.character {
+    position: relative;
+    z-index: -1;
+    height: 100vh;
     &#dark {
-        background-color: rgb(100, 100, 100);
+        background-color: $dark !important;
         color: rgb(255, 255, 255);
+        .character__img:after {
+            background: linear-gradient(bottom, $dark, $dark 20%, rgba(255, 255, 255, 0) 60%);
+        }
     }
     &#fire {
         background-color: rgb(145, 20, 20);
+        .character__img:after {
+            background: linear-gradient(bottom, $fire, $fire 20%, rgba(255, 255, 255, 0) 60%);
+        }
     }
     &#wind {
         background-color: rgb(51, 138, 17);
+        .character__img:after {
+            background: linear-gradient(bottom, $wind, $wind 20%, rgba(255, 255, 255, 0) 60%);
+        }
     }
     &#water {
         background-color: rgb(20, 85, 145);
+        .character__img:after {
+            background: linear-gradient(bottom, $water, $water 20%, rgba(255, 255, 255, 0) 60%);
+        }
     }
     &#ice {
         background-color: rgb(20, 85, 145);
+        .character__img:after {
+            background: linear-gradient(bottom, $ice, $ice 20%, rgba(255, 255, 255, 0) 60%);
+        }
     }
     &#earth {
         background-color: rgb(185, 130, 9);
+        .character__img:after {
+            background: linear-gradient(bottom, $earth, $earth 20%, rgba(255, 255, 255, 0) 60%);
+        }
     }
     &#thunder {
         color: black;
         background-color: rgb(255, 196, 0);
-    }
-    &_img {
-        width: 100%;
-        img {
-            width: 100%;
-            opacity: 0.1;
+        .character__img:after {
+            background: linear-gradient(bottom, $thunder, $thunder 20%, rgba(255, 255, 255, 0) 60%);
         }
     }
-    &_specs {
+    &__img {
+        width: 100%;
+        max-width: 480px;
+        position: absolute;
+        right: 10%;
+        z-index: -5;
+        animation-duration: 0.5s;
+        animation-name: LeftToRoight;
+        img {
+            position: relative;
+            width: 100%;
+            z-index: -4;
+        }
+        &:after {
+            position: absolute;
+            display: block;
+            content: "";
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -4;
+        }
+    }
+    .specs {
         margin: 0 auto;
         margin: 0 10px;
-        &_name {
-            &_main {
-                display: table-cell;
-                /*font-size: 37.5px;*/
-                /*font-size: 10vw;*/
-                font-size: 21px;
-                line-height: 37.5px;
-                line-height: 10vw;
-                font-family: 'Hind Vadodara', "NotoSans-bold", sans-serif;
-                font-weight: 700;
-                -webkit-font-smoothing: antialiased;
-                vertical-align: middle;
-                padding-right: 30px;
-                padding-right: 8vw;
-                position: relative;
-                white-space: nowrap;
-            }
-            /*
-            &_main:after {
-                content: '／';
-                display: block;
-                font-size: 37.5px;
-                font-size: 10vw;
-                line-height: 37.5px;
-                line-height: 10vw;
-                width: 32.5px;
-                width: 8.66667vw;
-                height: 100%;
-                position: absolute;
-                right: 0px;
-                top: 0px;
-                z-index: 0;
-                right: 0.26667vw;
-                right: 4px;
-                top: 2px;
-                top: 0.53333vw;
-                text-align: center;
-            }
-            */
-            &_kana {
-                font-size: 10px;
-                font-size: 2.66667vw;
-                display: block;
-                line-height: 1.0em;
-                margin-top: 10px;
-                /*
-                display: block;
-                font-size: 10px;
-                font-size: 2.66667vw;
-                line-height: 1em;
-                margin-top: 5px;
-                margin-top: 1.33333vw;
-                margin-left: -5px;
-                margin-left: -1.33333vw;
-                */
-            }
+        &__name {
+            &_main {}
+            &_kana {}
         }
-        &_profile {
-            display: table;
-            width: 100%;
-            font-size: 14px;
-            font-size: 3.73333vw;
-            &_r {
-                display: table-cell;
-            }
-            &_l {
-                display: table-cell;
-            }
-            i {
-                display: table-cell;
-                width: 100%;
-                position: relative;
-            }
-        }
-        &_text {
-            font-size: 14px;
-            font-size: 3.73333vw;
-        }
+        &__profile {}
+        &__text {}
+    }
+}
+
+@keyframes LeftToRoight {
+    0% {
+        opacity: 0;
+        transform: translateX(-200px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
     }
 }

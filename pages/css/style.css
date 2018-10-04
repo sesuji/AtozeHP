@@ -15,6 +15,8 @@ body {
   height: 100%;
   padding: 0px;
   margin: 0px;
+  position: relative;
+  z-index: -100;
 }
 
 a {
@@ -68,7 +70,6 @@ nav li {
   text-align: center;
   list-style-type: none;
   min-width: 0;
-  background-color: #d9c9b0;
 }
 
 nav li + li {
@@ -110,6 +111,9 @@ footer .footer_copyright {
 /* For Mobile */
 /* HAMBURGER MENU */
 @media screen and (max-width: 640px) {
+  header a {
+    text-shadow: initial;
+  }
   .menu-trigger-container {
     margin-left: auto;
     z-index: 1200;

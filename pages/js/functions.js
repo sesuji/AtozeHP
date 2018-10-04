@@ -1,6 +1,6 @@
 
 
-;(function($,window,undefind) {
+;(function($,window,undefined) {
 
 	var $window = $(window);
 	var is_anim = true;
