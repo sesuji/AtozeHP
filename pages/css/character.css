@@ -1,17 +1,17 @@
 .character {
   position: relative;
   z-index: -1;
-  height: 100vh;
+  height: 100%;
+  color: white;
 }
 
 .character#dark {
   background-color: #646464 !important;
-  color: white;
 }
 
 .character#dark .character__img:after {
-  background: -webkit-gradient(linear, left bottom, left top, from(#646464), color-stop(20%, #646464), color-stop(60%, rgba(255, 255, 255, 0)));
-  background: linear-gradient(bottom, #646464, #646464 20%, rgba(255, 255, 255, 0) 60%);
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(30%, #646464), color-stop(60%, rgba(100, 100, 100, 0)));
+  background: linear-gradient(to top, #646464 30%, rgba(100, 100, 100, 0) 60%);
 }
 
 .character#fire {
@@ -19,8 +19,8 @@
 }
 
 .character#fire .character__img:after {
-  background: -webkit-gradient(linear, left bottom, left top, from(#911414), color-stop(20%, #911414), color-stop(60%, rgba(255, 255, 255, 0)));
-  background: linear-gradient(bottom, #911414, #911414 20%, rgba(255, 255, 255, 0) 60%);
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(30%, #911414), color-stop(60%, rgba(145, 20, 20, 0)));
+  background: linear-gradient(to top, #911414 30%, rgba(145, 20, 20, 0) 60%);
 }
 
 .character#wind {
@@ -28,8 +28,8 @@
 }
 
 .character#wind .character__img:after {
-  background: -webkit-gradient(linear, left bottom, left top, from(#338a11), color-stop(20%, #338a11), color-stop(60%, rgba(255, 255, 255, 0)));
-  background: linear-gradient(bottom, #338a11, #338a11 20%, rgba(255, 255, 255, 0) 60%);
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(30%, #338a11), color-stop(60%, rgba(51, 138, 17, 0)));
+  background: linear-gradient(to top, #338a11 30%, rgba(51, 138, 17, 0) 60%);
 }
 
 .character#water {
@@ -37,8 +37,8 @@
 }
 
 .character#water .character__img:after {
-  background: -webkit-gradient(linear, left bottom, left top, from(#145591), color-stop(20%, #145591), color-stop(60%, rgba(255, 255, 255, 0)));
-  background: linear-gradient(bottom, #145591, #145591 20%, rgba(255, 255, 255, 0) 60%);
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(30%, #145591), color-stop(60%, rgba(20, 85, 145, 0)));
+  background: linear-gradient(to top, #145591 30%, rgba(20, 85, 145, 0) 60%);
 }
 
 .character#ice {
@@ -46,8 +46,8 @@
 }
 
 .character#ice .character__img:after {
-  background: -webkit-gradient(linear, left bottom, left top, from(#145591), color-stop(20%, #145591), color-stop(60%, rgba(255, 255, 255, 0)));
-  background: linear-gradient(bottom, #145591, #145591 20%, rgba(255, 255, 255, 0) 60%);
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(30%, #145591), color-stop(60%, rgba(20, 85, 145, 0)));
+  background: linear-gradient(to top, #145591 30%, rgba(20, 85, 145, 0) 60%);
 }
 
 .character#earth {
@@ -55,8 +55,8 @@
 }
 
 .character#earth .character__img:after {
-  background: -webkit-gradient(linear, left bottom, left top, from(#b98209), color-stop(20%, #b98209), color-stop(60%, rgba(255, 255, 255, 0)));
-  background: linear-gradient(bottom, #b98209, #b98209 20%, rgba(255, 255, 255, 0) 60%);
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(30%, #b98209), color-stop(60%, rgba(185, 130, 9, 0)));
+  background: linear-gradient(to top, #b98209 30%, rgba(185, 130, 9, 0) 60%);
 }
 
 .character#thunder {
@@ -65,20 +65,33 @@
 }
 
 .character#thunder .character__img:after {
-  background: -webkit-gradient(linear, left bottom, left top, from(#ffc400), color-stop(20%, #ffc400), color-stop(60%, rgba(255, 255, 255, 0)));
-  background: linear-gradient(bottom, #ffc400, #ffc400 20%, rgba(255, 255, 255, 0) 60%);
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(30%, #ffc400), color-stop(60%, rgba(255, 196, 0, 0)));
+  background: linear-gradient(to top, #ffc400 30%, rgba(255, 196, 0, 0) 60%);
+}
+
+.character > * {
+  position: relative;
+  top: -20%;
+}
+
+.character .img {
+  top: 0;
+}
+
+.character .quote {
+  font-size: 1.2em;
 }
 
 .character__img {
   width: 100%;
-  max-width: 480px;
-  position: absolute;
-  right: 10%;
+  min-width: 320px;
+  position: relative;
   z-index: -5;
   -webkit-animation-duration: 0.5s;
           animation-duration: 0.5s;
   -webkit-animation-name: LeftToRoight;
           animation-name: LeftToRoight;
+  overflow: hidden;
 }
 
 .character__img img {
@@ -101,6 +114,85 @@
 .character .specs {
   margin: 0 auto;
   margin: 0 10px;
+  max-width: 450px;
+}
+
+.character .specs__name {
+  border-bottom: solid 2px #fff;
+  padding-bottom: 12px;
+}
+
+.character .specs__name-main {
+  font-size: 1.8em;
+  font-weight: bold;
+}
+
+.character .specs__profile {
+  padding: 0 12px;
+  font-size: 0.8em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  white-space: nowrap;
+}
+
+.character .specs__profile-l {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.character .specs__profile-r {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.character .specs__profile dl {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.character .specs__profile dt {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.character .specs__profile dt::after {
+  content: "";
+  margin: 0 5px;
+  border-top: 1px solid #ccc;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.character .specs__profile dd {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin-left: 4px;
+  min-width: 0;
+}
+
+.character .specs .text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 @-webkit-keyframes LeftToRoight {
@@ -126,6 +218,92 @@
     opacity: 1;
     -webkit-transform: translateX(0);
             transform: translateX(0);
+  }
+}
+
+@media screen and (min-width: 720px) {
+  .character__img {
+    max-width: 720px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .character {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    height: auto;
+  }
+  .character__img {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    max-width: 720px;
+    height: 100%;
+    overflow: hidden;
+  }
+  .character .specs {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    min-width: 140px;
+    top: 60px;
+    height: 200px;
+  }
+  .character .text {
+    width: 100%;
+  }
+  .character#dark {
+    background-color: #646464 !important;
+  }
+  .character#dark .character__img:after {
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(15%, #646464), color-stop(50%, rgba(100, 100, 100, 0)));
+    background: linear-gradient(to top, #646464 15%, rgba(100, 100, 100, 0) 50%);
+  }
+  .character#fire {
+    background-color: #911414;
+  }
+  .character#fire .character__img:after {
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(15%, #911414), color-stop(50%, rgba(145, 20, 20, 0)));
+    background: linear-gradient(to top, #911414 15%, rgba(145, 20, 20, 0) 50%);
+  }
+  .character#wind {
+    background-color: #338a11;
+  }
+  .character#wind .character__img:after {
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(15%, #338a11), color-stop(50%, rgba(51, 138, 17, 0)));
+    background: linear-gradient(to top, #338a11 15%, rgba(51, 138, 17, 0) 50%);
+  }
+  .character#water {
+    background-color: #145591;
+  }
+  .character#water .character__img:after {
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(15%, #145591), color-stop(50%, rgba(20, 85, 145, 0)));
+    background: linear-gradient(to top, #145591 15%, rgba(20, 85, 145, 0) 50%);
+  }
+  .character#ice {
+    background-color: #145591;
+  }
+  .character#ice .character__img:after {
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(15%, #145591), color-stop(50%, rgba(20, 85, 145, 0)));
+    background: linear-gradient(to top, #145591 15%, rgba(20, 85, 145, 0) 50%);
+  }
+  .character#earth {
+    background-color: #b98209;
+  }
+  .character#earth .character__img:after {
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(15%, #b98209), color-stop(50%, rgba(185, 130, 9, 0)));
+    background: linear-gradient(to top, #b98209 15%, rgba(185, 130, 9, 0) 50%);
+  }
+  .character#thunder {
+    color: black;
+    background-color: #ffc400;
+  }
+  .character#thunder .character__img:after {
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(15%, #ffc400), color-stop(50%, rgba(255, 196, 0, 0)));
+    background: linear-gradient(to top, #ffc400 15%, rgba(255, 196, 0, 0) 50%);
   }
 }
 /*# sourceMappingURL=character.css.map */

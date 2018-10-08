@@ -3,6 +3,7 @@ window.onload = function () {
     if (character.length) {
         const type = character[0].id;
         const currentColor = getComputedStyle(document.getElementById(type)).backgroundColor;
+        document.body.style.backgroundColor = currentColor;
         document.documentElement.style.backgroundColor = currentColor;
     }
 }

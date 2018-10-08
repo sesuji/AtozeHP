@@ -1,72 +1,77 @@
-$dark: rgb(100, 100, 100);
-$light: rgb(100, 100, 100);
-$fire: rgb(145, 20, 20);
-$wind: rgb(51, 138, 17);
-$water: rgb(20, 85, 145);
-$ice: rgb(20, 85, 145);
-$earth: rgb(185, 130, 9);
-$thunder:rgb(255, 196, 0);
+@import "variables";
 .character {
     position: relative;
     z-index: -1;
-    height: 100vh;
+    height: 100%;
+    color: rgb(255, 255, 255);
     &#dark {
         background-color: $dark !important;
-        color: rgb(255, 255, 255);
         .character__img:after {
-            background: linear-gradient(bottom, $dark, $dark 20%, rgba(255, 255, 255, 0) 60%);
+            background: linear-gradient(to top, $dark 30%, $dark-alpha 60%);
         }
     }
     &#fire {
-        background-color: rgb(145, 20, 20);
+        background-color: $fire;
         .character__img:after {
-            background: linear-gradient(bottom, $fire, $fire 20%, rgba(255, 255, 255, 0) 60%);
+            background: linear-gradient(to top, $fire 30%, $fire-alpha 60%);
         }
     }
     &#wind {
-        background-color: rgb(51, 138, 17);
+        background-color: $wind;
         .character__img:after {
-            background: linear-gradient(bottom, $wind, $wind 20%, rgba(255, 255, 255, 0) 60%);
+            background: linear-gradient(to top, $wind 30%, $wind-alpha 60%);
         }
     }
     &#water {
-        background-color: rgb(20, 85, 145);
+        background-color: $water;
         .character__img:after {
-            background: linear-gradient(bottom, $water, $water 20%, rgba(255, 255, 255, 0) 60%);
+            background: linear-gradient(to top, $water 30%, $water-alpha 60%);
         }
     }
     &#ice {
-        background-color: rgb(20, 85, 145);
+        background-color: $ice;
         .character__img:after {
-            background: linear-gradient(bottom, $ice, $ice 20%, rgba(255, 255, 255, 0) 60%);
+            background: linear-gradient(to top, $ice 30%, $ice-alpha 60%);
         }
     }
     &#earth {
-        background-color: rgb(185, 130, 9);
+        background-color: $earth;
         .character__img:after {
-            background: linear-gradient(bottom, $earth, $earth 20%, rgba(255, 255, 255, 0) 60%);
+            background: linear-gradient(to top, $earth 30%, $earth-alpha 60%);
         }
     }
     &#thunder {
         color: black;
-        background-color: rgb(255, 196, 0);
+        background-color: $thunder;
         .character__img:after {
-            background: linear-gradient(bottom, $thunder, $thunder 20%, rgba(255, 255, 255, 0) 60%);
+            background: linear-gradient(to top, $thunder 30%, $thunder-alpha 60%);
         }
+    }
+    >*{
+        position: relative;
+        top: -20%;
+    }
+    .img {
+        top: 0;
+    }
+    .quote {
+        font-size: 1.2em;
     }
     &__img {
         width: 100%;
-        max-width: 480px;
-        position: absolute;
-        right: 10%;
+        min-width: 320px;
+        position: relative;
+
         z-index: -5;
         animation-duration: 0.5s;
         animation-name: LeftToRoight;
+        overflow: hidden;
         img {
-            position: relative;
-            width: 100%;
-            z-index: -4;
+             position: relative;
+             width: 100%;
+             z-index: -4;
         }
+        
         &:after {
             position: absolute;
             display: block;
@@ -81,12 +86,53 @@ $thunder:rgb(255, 196, 0);
     .specs {
         margin: 0 auto;
         margin: 0 10px;
+        max-width: 450px;
         &__name {
-            &_main {}
-            &_kana {}
+            border-bottom: solid 2px #fff;
+            padding-bottom: 12px;
+            &-main {
+                font-size: 1.8em;
+                font-weight: bold;
+            }
+            &-kana {}
         }
-        &__profile {}
-        &__text {}
+        &__profile {
+            padding: 0 12px;
+            font-size: 0.8em;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            white-space: nowrap;
+            &-l{
+                flex: 1;
+            }
+            &-r{
+                flex: 1;
+            }
+            dl{
+                display: flex;
+            }
+            dt {
+                display:flex;
+                flex: 1;
+                align-items:center;
+                justify-content: space-around;
+             &::after {
+                content:"";
+                 margin:0 5px;
+                 border-top:1px solid #ccc;
+                 flex: 1;
+                }
+            }
+            dd {
+                flex: 1;
+                margin-left: 4px;
+                min-width: 0;
+            }
+        }
+        .text {
+            display: flex;
+        }
     }
 }
 
@@ -98,5 +144,76 @@ $thunder:rgb(255, 196, 0);
     100% {
         opacity: 1;
         transform: translateX(0);
+    }
+}
+
+@media screen and (min-width: 720px) {
+    .character__img {
+        max-width: 720px;
+    }
+}
+@media screen and (min-width: 900px) {
+    .character {
+        display: flex;
+        flex-wrap: wrap;
+        height: auto;
+        &__img {
+            flex: 1;
+            max-width: 720px;
+            height: 100%;
+            overflow: hidden;
+        }
+        .specs {
+            flex: 1;
+            min-width: 140px;
+            top: 60px;
+            height: 200px;
+        }
+        .text {
+            width: 100%;
+        }
+        &#dark {
+            background-color: $dark !important;
+            .character__img:after {
+                background: linear-gradient(to top, $dark 15%, $dark-alpha 50%);
+            }
+        }
+        &#fire {
+            background-color: $fire;
+            .character__img:after {
+                background: linear-gradient(to top, $fire 15%, $fire-alpha 50%);
+            }
+        }
+        &#wind {
+            background-color: $wind;
+            .character__img:after {
+                background: linear-gradient(to top, $wind 15%, $wind-alpha 50%);
+            }
+        }
+        &#water {
+            background-color: $water;
+            .character__img:after {
+                background: linear-gradient(to top, $water 15%, $water-alpha 50%);
+            }
+        }
+        &#ice {
+            background-color: $ice;
+            .character__img:after {
+                background: linear-gradient(to top, $ice 15%, $ice-alpha 50%);
+            }
+        }
+        &#earth {
+            background-color: $earth;
+            .character__img:after {
+                background: linear-gradient(to top, $earth 15%, $earth-alpha 50%);
+            }
+        }
+        &#thunder {
+            color: black;
+            background-color: $thunder;
+            .character__img:after {
+                background: linear-gradient(to top, $thunder 15%, $thunder-alpha 50%);
+            }
+        }
     }
 }
