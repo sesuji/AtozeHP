@@ -140,9 +140,23 @@
     }
     .picture {
         &-container {
+            display: flex;
             margin-top: 32px;
             width: 100%;
-            height: 150px;
+            height: 135px;
+            .title {
+                position: absolute;
+                top: -0.3em;
+            }
+            .img-box {
+                position: relative;
+                margin: 0.5em auto;
+                .img {
+                    max-width: 240px;
+                    height: 100%;
+                    background-color: white;
+                }
+            }
             &:before {
                 content: '';
                 position: absolute;

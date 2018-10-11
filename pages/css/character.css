@@ -200,9 +200,28 @@
 }
 
 .character .picture-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   margin-top: 32px;
   width: 100%;
-  height: 150px;
+  height: 135px;
+}
+
+.character .picture-container .title {
+  position: absolute;
+  top: -0.3em;
+}
+
+.character .picture-container .img-box {
+  position: relative;
+  margin: 0.5em auto;
+}
+
+.character .picture-container .img-box .img {
+  max-width: 240px;
+  height: 100%;
+  background-color: white;
 }
 
 .character .picture-container:before {
