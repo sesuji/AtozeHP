@@ -10,9 +10,10 @@ html {
 html,
 body {
     font-family: 'body';
+    // font-family: 'body', "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
     color: #351b04;
     background-color: #d9c9b0;
-    height: 100%;
+    // height: 100%;
     padding: 0px;
     margin: 0px;
     position: relative;
@@ -25,6 +26,7 @@ a {
 
 header {
     font-family: 'header';
+    // font-family: 'header', "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
     position: fixed;
     width: calc(100% - 30px);
     top: 15px;
@@ -39,6 +41,10 @@ header {
 ul {
     margin: 0px;
     padding: 0px;
+}
+
+pre {
+    line-height: 1.8rem;
 }
 
 /* HEADER */
@@ -61,8 +67,7 @@ nav li {
     padding: 0 10px;
     text-align: center;
     list-style-type: none;
-    min-width: 0;
-    // background-color: #d9c9b0;
+    min-width: 0; // background-color: #d9c9b0;
 }
 
 nav li+li {
@@ -70,8 +75,8 @@ nav li+li {
     border-left: 1px solid #333;
 }
 
-.content-container{
-    margin-bottom: 20px;
+.content-container {
+    margin: 60px 20px 40px;
 }
 
 /* CONTENT */

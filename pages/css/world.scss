@@ -1,0 +1,89 @@
+@import "variables";
+.world-list {}
+
+.fire {
+    background-color: $fire !important;
+}
+
+.world {
+    font-size: 0.8rem;
+    .title {
+        font-size: 1rem;
+    }
+    .quote {
+        font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+        font-size: 1rem;
+        font-weight: bold; // font-weight: 500;
+        font-style: italic;
+    }
+    .characters {
+        >* {
+            margin: 20px 0;
+        }
+        .group {
+            .label {
+                display: inline-block;
+                position: relative;
+                background: rgba(255, 255, 255, 0.75);
+                padding: 0.5rem;
+                &__text {
+                    margin-right: 30px;
+                    &:after {
+                        content: "";
+                        display: inline-block;
+                        position: absolute;
+                        top: 0;
+                        right: 0px;
+                        width: 0;
+                        height: 0;
+                        border-style: solid;
+                        border-color: transparent $bg transparent transparent;
+                        border-width: 0 30px 2.2rem 0;
+                    }
+                }
+            }
+            .members {
+                border: solid 6px rgba(255, 255, 255, 0.75);
+                .member {
+                    margin: 16px;
+                    flex: 1 200px;
+                }
+                .member .profile::before {
+                    content: '';
+                    width: 100%;
+                    max-width: 200px;
+                    height: 4px;
+                    display: block;
+                    margin-right: auto;
+                    border-top: 1px dotted white;
+                }
+            }
+        }
+        .members {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .member {
+            margin: 0 16px;
+            .name {
+                display: inline-block;
+                text-align: center;
+                .image {
+                    img {
+                        width: 60px;
+                        height: 60px;
+                        border-radius: 50%;
+                        background: rgba(255, 255, 255, 0.75);
+                    }
+                }
+            }
+            .profile {}
+        }
+    }
+}
+
+@media screen and (max-width: $break-point) {
+    br {
+        display: none;
+    }
+}

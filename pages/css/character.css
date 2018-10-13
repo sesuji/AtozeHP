@@ -1,74 +1,90 @@
 /* seagreen #2e8b57 */
 /* sienna #a0522d */
-.character {
-  position: relative;
-  z-index: -1;
-  height: 100%;
-  color: white;
-}
-
-.character#dark {
+.dark {
   background-color: #646464 !important;
 }
 
-.character#dark .character__img:after {
+.dark .character__img:after {
   background: -webkit-gradient(linear, left bottom, left top, color-stop(30%, #646464), color-stop(60%, rgba(100, 100, 100, 0)));
   background: linear-gradient(to top, #646464 30%, rgba(100, 100, 100, 0) 60%);
 }
 
-.character#fire {
+.fire {
   background-color: #911414;
 }
 
-.character#fire .character__img:after {
+.fire .character__img:after {
   background: -webkit-gradient(linear, left bottom, left top, color-stop(30%, #911414), color-stop(60%, rgba(145, 20, 20, 0)));
   background: linear-gradient(to top, #911414 30%, rgba(145, 20, 20, 0) 60%);
 }
 
-.character#wind {
+.wind {
   background-color: seagreen;
 }
 
-.character#wind .character__img:after {
+.wind .character__img:after {
   background: -webkit-gradient(linear, left bottom, left top, color-stop(30%, seagreen), color-stop(60%, rgba(46, 139, 87, 0)));
   background: linear-gradient(to top, seagreen 30%, rgba(46, 139, 87, 0) 60%);
 }
 
-.character#water {
+.water {
   background-color: #145591;
 }
 
-.character#water .character__img:after {
+.water .character__img:after {
   background: -webkit-gradient(linear, left bottom, left top, color-stop(30%, #145591), color-stop(60%, rgba(20, 85, 145, 0)));
   background: linear-gradient(to top, #145591 30%, rgba(20, 85, 145, 0) 60%);
 }
 
-.character#ice {
+.ice {
   background-color: #145591;
 }
 
-.character#ice .character__img:after {
+.ice .character__img:after {
   background: -webkit-gradient(linear, left bottom, left top, color-stop(30%, #145591), color-stop(60%, rgba(20, 85, 145, 0)));
   background: linear-gradient(to top, #145591 30%, rgba(20, 85, 145, 0) 60%);
 }
 
-.character#earth {
+.earth {
   background-color: sienna;
 }
 
-.character#earth .character__img:after {
+.earth .character__img:after {
   background: -webkit-gradient(linear, left bottom, left top, color-stop(30%, sienna), color-stop(60%, rgba(160, 82, 45, 0)));
   background: linear-gradient(to top, sienna 30%, rgba(160, 82, 45, 0) 60%);
 }
 
-.character#thunder {
-  color: black;
-  background-color: #ffc400;
+.thunder {
+  background-color: #ccc22d;
 }
 
-.character#thunder .character__img:after {
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(30%, #ffc400), color-stop(60%, rgba(255, 196, 0, 0)));
-  background: linear-gradient(to top, #ffc400 30%, rgba(255, 196, 0, 0) 60%);
+.thunder .character {
+  color: black !important;
+}
+
+.thunder .character__img:after {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(30%, #ccc22d), color-stop(60%, rgba(204, 194, 45, 0)));
+  background: linear-gradient(to top, #ccc22d 30%, rgba(204, 194, 45, 0) 60%);
+}
+
+.thunder .character .specs__name {
+  border-bottom: solid 2px #000 !important;
+}
+
+.thunder .character .specs__profile dt::after {
+  border-top: 1px solid #000 !important;
+}
+
+.character {
+  color: white;
+  margin: 0;
+  position: relative;
+  z-index: -1;
+  height: 100%;
+}
+
+.character > :last-child {
+  margin-bottom: 3rem;
 }
 
 .character > * {
@@ -237,7 +253,7 @@
   left: initial;
   right: -30px;
   border: 14px solid transparent;
-  border-left: 14px solid #555;
+  border-left: 14px solid rgba(0, 0, 0, 0.3);
 }
 
 .character .talk-text .talk .icon {
@@ -257,10 +273,11 @@
   margin: 1.5em 0 1.5em 1px;
   padding: 7px 10px;
   font-size: 0.8rem;
-  border: solid 3px #555;
+  border: solid 3px rgba(0, 0, 0, 0.3);
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  background: #FFF;
+  background-clip: padding-box;
+  background-color: #FFF;
 }
 
 .character .talk-text .talk .text:before {
@@ -281,7 +298,7 @@
   left: -30px;
   margin-top: -14px;
   border: 14px solid transparent;
-  border-right: 14px solid #555;
+  border-right: 14px solid rgba(0, 0, 0, 0.3);
   z-index: 1;
 }
 
@@ -390,55 +407,54 @@
   .character > * {
     width: 100%;
   }
-  .character#dark {
+  .dark {
     background-color: #646464 !important;
   }
-  .character#dark .character__img:after {
+  .dark .character__img:after {
     background: -webkit-gradient(linear, left bottom, left top, color-stop(15%, #646464), color-stop(50%, rgba(100, 100, 100, 0)));
     background: linear-gradient(to top, #646464 15%, rgba(100, 100, 100, 0) 50%);
   }
-  .character#fire {
+  .fire {
     background-color: #911414;
   }
-  .character#fire .character__img:after {
+  .fire .character__img:after {
     background: -webkit-gradient(linear, left bottom, left top, color-stop(15%, #911414), color-stop(50%, rgba(145, 20, 20, 0)));
     background: linear-gradient(to top, #911414 15%, rgba(145, 20, 20, 0) 50%);
   }
-  .character#wind {
+  .wind {
     background-color: seagreen;
   }
-  .character#wind .character__img:after {
+  .wind .character__img:after {
     background: -webkit-gradient(linear, left bottom, left top, color-stop(15%, seagreen), color-stop(50%, rgba(46, 139, 87, 0)));
     background: linear-gradient(to top, seagreen 15%, rgba(46, 139, 87, 0) 50%);
   }
-  .character#water {
+  .water {
     background-color: #145591;
   }
-  .character#water .character__img:after {
+  .water .character__img:after {
     background: -webkit-gradient(linear, left bottom, left top, color-stop(15%, #145591), color-stop(50%, rgba(20, 85, 145, 0)));
     background: linear-gradient(to top, #145591 15%, rgba(20, 85, 145, 0) 50%);
   }
-  .character#ice {
+  .ice {
     background-color: #145591;
   }
-  .character#ice .character__img:after {
+  .ice .character__img:after {
     background: -webkit-gradient(linear, left bottom, left top, color-stop(15%, #145591), color-stop(50%, rgba(20, 85, 145, 0)));
     background: linear-gradient(to top, #145591 15%, rgba(20, 85, 145, 0) 50%);
   }
-  .character#earth {
+  .earth {
     background-color: sienna;
   }
-  .character#earth .character__img:after {
+  .earth .character__img:after {
     background: -webkit-gradient(linear, left bottom, left top, color-stop(15%, sienna), color-stop(50%, rgba(160, 82, 45, 0)));
     background: linear-gradient(to top, sienna 15%, rgba(160, 82, 45, 0) 50%);
   }
-  .character#thunder {
-    color: black;
-    background-color: #ffc400;
+  .thunder {
+    background-color: #ccc22d;
   }
-  .character#thunder .character__img:after {
-    background: -webkit-gradient(linear, left bottom, left top, color-stop(15%, #ffc400), color-stop(50%, rgba(255, 196, 0, 0)));
-    background: linear-gradient(to top, #ffc400 15%, rgba(255, 196, 0, 0) 50%);
+  .thunder .character__img:after {
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(15%, #ccc22d), color-stop(50%, rgba(204, 194, 45, 0)));
+    background: linear-gradient(to top, #ccc22d 15%, rgba(204, 194, 45, 0) 50%);
   }
 }
 /*# sourceMappingURL=character.css.map */

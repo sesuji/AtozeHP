@@ -1,0 +1,101 @@
+@charset "UTF-8";
+/* seagreen #2e8b57 */
+/* sienna #a0522d */
+.fire {
+  background-color: #911414 !important;
+}
+
+.world {
+  font-size: 0.8rem;
+}
+
+.world .title {
+  font-size: 1rem;
+}
+
+.world .quote {
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.world .characters > * {
+  margin: 20px 0;
+}
+
+.world .characters .group .label {
+  display: inline-block;
+  position: relative;
+  background: rgba(255, 255, 255, 0.75);
+  padding: 0.5rem;
+}
+
+.world .characters .group .label__text {
+  margin-right: 30px;
+}
+
+.world .characters .group .label__text:after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: 0px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-color: transparent #d9c9b0 transparent transparent;
+  border-width: 0 30px 2.2rem 0;
+}
+
+.world .characters .group .members {
+  border: solid 6px rgba(255, 255, 255, 0.75);
+}
+
+.world .characters .group .members .member {
+  margin: 16px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 200px;
+          flex: 1 200px;
+}
+
+.world .characters .group .members .member .profile::before {
+  content: '';
+  width: 100%;
+  max-width: 200px;
+  height: 4px;
+  display: block;
+  margin-right: auto;
+  border-top: 1px dotted white;
+}
+
+.world .characters .members {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.world .characters .member {
+  margin: 0 16px;
+}
+
+.world .characters .member .name {
+  display: inline-block;
+  text-align: center;
+}
+
+.world .characters .member .name .image img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.75);
+}
+
+@media screen and (max-width: 640px) {
+  br {
+    display: none;
+  }
+}
+/*# sourceMappingURL=world.css.map */
