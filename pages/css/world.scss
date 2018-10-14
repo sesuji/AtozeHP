@@ -8,7 +8,17 @@
 .world {
     font-size: 0.8rem;
     .title {
-        font-size: 1rem;
+        font-size: 1.2rem;
+    }
+    .info {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .prof {
+        white-space: nowrap;
+    }
+    .image {
+        mix-blend-mode: multiply;
     }
     .quote {
         font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
@@ -16,10 +26,35 @@
         font-weight: bold; // font-weight: 500;
         font-style: italic;
     }
+    .specs {
+        width: auto;
+        dl {
+            display: flex;
+        }
+        dt {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            width: 6rem;
+            &::after {
+                content: "";
+                margin: 0 5px;
+                border-top: 1px solid #000;
+                width: 20px;
+            }
+        }
+        dd {
+            flex: 1;
+            margin-left: 1rem;
+            min-width: 0;
+        }
+    }
     .characters {
         >* {
             margin: 20px 0;
         }
+        position: relative;
+        z-index: 3;
         .group {
             .label {
                 display: inline-block;
@@ -47,6 +82,12 @@
                 .member {
                     margin: 16px;
                     flex: 1 200px;
+                    .name {
+                        text-align: left;
+                    }
+                    .image {
+                        display: none; // TODO: 一時的
+                    }
                 }
                 .member .profile::before {
                     content: '';
@@ -68,16 +109,17 @@
             .name {
                 display: inline-block;
                 text-align: center;
-                .image {
-                    img {
-                        width: 60px;
-                        height: 60px;
-                        border-radius: 50%;
-                        background: rgba(255, 255, 255, 0.75);
-                    }
+            }
+            .image {
+                position: relative;
+                img {
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 50%;
+                    // background-color: rgba(255, 255, 255, 0.75);
                 }
             }
-            .profile {}
+            .description {}
         }
     }
 }
