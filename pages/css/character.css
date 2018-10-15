@@ -436,9 +436,8 @@
 }
 
 .characters .member {
-  margin: 0 16px;
-  -ms-flex-preferred-size: 200px;
-      flex-basis: 200px;
+  margin: 8px 16px;
+  width: 100%;
 }
 
 .characters .member .name {
@@ -454,6 +453,10 @@
   width: 60px;
   height: 60px;
   border-radius: 50%;
+}
+
+.characters .member .profile {
+  text-align: left !important;
 }
 
 .list img {
@@ -524,6 +527,10 @@
   }
   .character > * {
     width: 100%;
+  }
+  .member {
+    -ms-flex-preferred-size: 240px;
+        flex-basis: 240px;
   }
   .dark {
     background-color: #646464 !important;

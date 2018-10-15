@@ -338,8 +338,8 @@
         flex-wrap: wrap;
     }
     .member {
-        margin: 0 16px;
-        flex-basis: 200px;
+        margin: 8px 16px;
+        width: 100%;
         .name {
             display: inline-block;
             text-align: center;
@@ -352,7 +352,9 @@
                 border-radius: 50%; // background-color: rgba(255, 255, 255, 0.75);
             }
         }
-        .description {}
+        .profile {
+            text-align: left !important;
+        }
     }
 }
 
@@ -406,6 +408,9 @@
         >* {
             width: 100%;
         }
+    }
+    .member {
+        flex-basis: 240px;
     }
     .dark {
         background-color: $dark !important;
