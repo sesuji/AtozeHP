@@ -15,6 +15,27 @@
   background: linear-gradient(to top, #646464 30%, rgba(100, 100, 100, 0) 60%);
 }
 
+.light {
+  background-color: #dcdcc8;
+}
+
+.light .character {
+  color: black !important;
+}
+
+.light .character__img:after {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(30%, #dcdcc8), color-stop(60%, rgba(200, 200, 200, 0)));
+  background: linear-gradient(to top, #dcdcc8 30%, rgba(200, 200, 200, 0) 60%);
+}
+
+.light .character .specs__name {
+  border-bottom: solid 2px #000 !important;
+}
+
+.light .character .specs__profile dt::after {
+  border-top: 1px solid #000 !important;
+}
+
 .fire {
   background-color: #911414;
 }
@@ -99,7 +120,7 @@
 
 .character > * {
   position: relative;
-  top: -160px;
+  top: -100px;
   margin: 0 12px;
   padding: 12px;
 }
@@ -163,7 +184,8 @@
 }
 
 .character .specs__name-main {
-  font-size: 1.8rem;
+  font-size: 20px;
+  font-size: 6.25vw;
   font-weight: bold;
 }
 
@@ -235,7 +257,7 @@
 }
 
 .character .text {
-  display: none;
+  color: transparent;
   word-break: break-all;
 }
 
@@ -374,6 +396,10 @@
   margin: 20px 0;
 }
 
+.characters .title-label {
+  max-width: 560px;
+}
+
 .characters .group .label {
   display: inline-block;
   position: relative;
@@ -494,6 +520,9 @@
   .character__img {
     max-width: 720px;
   }
+  .specs__name-main {
+    font-size: 1.8rem !important;
+  }
 }
 
 @media screen and (min-width: 940px) {
@@ -508,7 +537,7 @@
   .character .img {
     width: auto;
     max-width: 720px;
-    min-height: 500px;
+    min-height: 400px;
   }
   .character__img {
     -webkit-box-flex: 1;
@@ -520,10 +549,14 @@
     -webkit-box-flex: 1;
         -ms-flex: 1;
             flex: 1;
+    margin-right: auto;
     width: auto;
-    min-width: 140px;
+    min-width: 120px;
     height: auto;
     top: 60px;
+  }
+  .character .specs__name-main {
+    font-size: 1.8rem;
   }
   .character > * {
     width: 100%;
@@ -538,6 +571,13 @@
   .dark .character__img:after {
     background: -webkit-gradient(linear, left bottom, left top, color-stop(15%, #646464), color-stop(50%, rgba(100, 100, 100, 0)));
     background: linear-gradient(to top, #646464 15%, rgba(100, 100, 100, 0) 50%);
+  }
+  .light {
+    background-color: #ccc22d;
+  }
+  .light .character__img:after {
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(15%, #dcdcc8), color-stop(50%, rgba(200, 200, 200, 0)));
+    background: linear-gradient(to top, #dcdcc8 15%, rgba(200, 200, 200, 0) 50%);
   }
   .fire {
     background-color: #911414;

@@ -105,7 +105,7 @@ const third = [
     }, {
         name: 'ティアナ・リーゼロッテ',
         // img: './img/tiana_ico.png',
-        url: '3_reinhart.html',
+        url: '3_tiana.html',
     }, {
         name: 'ザキ・ガルダンヴァ',
         // img: './img/zhaki_ico.png',
