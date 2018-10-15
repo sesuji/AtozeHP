@@ -362,31 +362,94 @@
   background-repeat: no-repeat;
 }
 
-.character .talk-text .title {
+/* For Character Group */
+.characters {
   position: relative;
-  padding-left: 25px;
-  margin-bottom: 24px;
+  z-index: -1;
 }
 
-.character .talk-text .title:before {
-  position: absolute;
+.characters > * {
+  margin: 20px 0;
+}
+
+.characters .group .label {
+  display: inline-block;
+  position: relative;
+  background: rgba(255, 255, 255, 0.75);
+  padding: 0.5rem;
+}
+
+.characters .group .label__text {
+  margin-right: 30px;
+}
+
+.characters .group .label__text:after {
   content: "";
-  bottom: -3px;
-  left: 0;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: 0px;
   width: 0;
   height: 0;
-  border: none;
-  border-left: solid 15px transparent;
-  border-bottom: solid 15px rgba(0, 0, 0, 0.75);
+  border-style: solid;
+  border-color: transparent #d9c9b0 transparent transparent;
+  border-width: 0 30px 2.2rem 0;
 }
 
-.character .talk-text .title:after {
-  position: absolute;
-  content: "";
-  bottom: -3px;
-  left: 10px;
+.characters .group .members {
+  border: solid 6px rgba(255, 255, 255, 0.75);
+}
+
+.characters .group .members .member {
+  margin: 16px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 200px;
+          flex: 1 200px;
+}
+
+.characters .group .members .member .name {
+  text-align: left;
+}
+
+.characters .group .members .member .image {
+  display: none;
+}
+
+.characters .group .members .member .profile::before {
+  content: '';
   width: 100%;
-  border-bottom: solid 3px rgba(0, 0, 0, 0.75);
+  max-width: 200px;
+  height: 4px;
+  display: block;
+  margin-right: auto;
+  border-top: 1px dotted white;
+}
+
+.characters .members {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.characters .member {
+  margin: 0 16px;
+}
+
+.characters .member .name {
+  display: inline-block;
+  text-align: center;
+}
+
+.characters .member .image {
+  position: relative;
+}
+
+.characters .member .image img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
 }
 
 @-webkit-keyframes LeftToRoight {

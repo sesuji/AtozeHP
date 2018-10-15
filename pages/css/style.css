@@ -121,6 +121,34 @@ footer .footer_copyright {
   src: url("../font/Vinta.ttf");
 }
 
+/* 共通Component */
+.title-label {
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 24px;
+}
+
+.title-label:before {
+  position: absolute;
+  content: "";
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border: none;
+  border-left: solid 15px transparent;
+  border-bottom: solid 15px rgba(0, 0, 0, 0.75);
+}
+
+.title-label:after {
+  position: absolute;
+  content: "";
+  bottom: -3px;
+  left: 10px;
+  width: 100%;
+  border-bottom: solid 3px rgba(0, 0, 0, 0.75);
+}
+
 /* For Mobile */
 /* HAMBURGER MENU */
 @media screen and (max-width: 640px) {
