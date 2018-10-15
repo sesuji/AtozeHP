@@ -235,6 +235,7 @@
 }
 
 .character .text {
+  display: none;
   word-break: break-all;
 }
 
@@ -364,6 +365,7 @@
 
 /* For Character Group */
 .characters {
+  font-size: 0.8rem;
   position: relative;
   z-index: -1;
 }
@@ -435,6 +437,8 @@
 
 .characters .member {
   margin: 0 16px;
+  -ms-flex-preferred-size: 200px;
+      flex-basis: 200px;
 }
 
 .characters .member .name {
@@ -450,6 +454,11 @@
   width: 60px;
   height: 60px;
   border-radius: 50%;
+}
+
+.list img {
+  display: block;
+  margin-right: auto;
 }
 
 @-webkit-keyframes LeftToRoight {

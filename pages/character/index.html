@@ -7,7 +7,9 @@
     <link rel="stylesheet" type="text/css" href="../css/style.css">
     <link rel="stylesheet" type="text/css" href="../css/character.css">
     <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script src="../js/character_list_variables.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="../js/character_list.js"></script>
     <script src="../include/include.js"></script>
     <script src="../js/base.js"></script>
     <title></title>
@@ -18,64 +20,31 @@
     <div id="include-header"></div>
     <script>header('../');</script>
     <!-- CONTENT -->
-    <div class="content-container">
-        <div id="first">
+    <div class="characters content-container">
+        <div class="list" id="first">
             【1章】
-            レオンニール・フレヴァ
-            ？？？
-            ビースト
-            アルテミア
-            メリッサ
         </div>
-        <div id="second">
+        <div class="list" id="second">
             【2章】
-            キルデバート・アム・トリストラム
-            ヴェデ
-            リーレル・カリストロ
-            ヒュプノス・デアトッド
-            ？？？
-            アレクシス・ラザフォード
-            クリストファー
         </div>
-        <div id="second_another">
+        <div class="list" id="second_another">
             【2章外伝】
-            ラインハルト
-            ジークフリート
-            ランスロット
-            ガウェイン
         </div>
-        <div id="third">
+        <div class="list" id="third">
             【3章】
-            ラインハルト
-            ジークフリート
-            ランスロット
-            ガウェイン
         </div>
-        <div id="fourth">
+        <div class="list" id="fourth">
             【4章】
-            テラ・クルセイド
-            ソティラス
-            シュトライ・バロッツ
-            リッター・リェカーヴ・R・オルコス
-            シン
-            フェアラート
-            マルシュアース
-            ノーチラス
-            エリザヴェート
-            バク・ジュッラーレ
-            メアリー
-
         </div>
-        <div id="fifth">
+        <div class="list" id="fifth">
             【5章】
-            バル・バロイ
-            アリア
-            エルデ・ラント
         </div>
-        <div class="characters">
-            <div id="include-frovatus"></div>
-            <script>include('include-frovatus', '../world/', 'frovatus_character.html');</script>
-        </div>
+        <div class="title-label">フローヴァトゥス</div>
+        <div id="include-frovatus"></div>
+        <script>include('include-frovatus', '../world/', 'frovatus_character.html');</script>
+        <div class="title-label">ヴァッセリュアーレ</div>
+        <div id="include-wasseluare"></div>
+        <script>include('include-wasseluare', '../world/', 'wasseluare_character.html');</script>
     </div>
     <!-- SIDE -->
     <!-- FOOTER -->

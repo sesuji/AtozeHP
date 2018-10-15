@@ -175,6 +175,7 @@
         }
     }
     .text {
+        display: none; // TODO：かっこいい文章書く
         word-break: break-all;
     }
     .talk-text {
@@ -284,6 +285,7 @@
     >* {
         margin: 20px 0;
     }
+    font-size: 0.8rem;
     position: relative;
     z-index: -1;
     .group {
@@ -337,6 +339,7 @@
     }
     .member {
         margin: 0 16px;
+        flex-basis: 200px;
         .name {
             display: inline-block;
             text-align: center;
@@ -350,6 +353,14 @@
             }
         }
         .description {}
+    }
+}
+
+// INDEX用
+.list {
+    img {
+        display: block;
+        margin-right: auto;
     }
 }
 
