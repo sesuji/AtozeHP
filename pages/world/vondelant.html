@@ -10,6 +10,7 @@
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="../include/include.js"></script>
     <script src="../js/base.js"></script>
+    <script src="../js/generate_member.js"></script>
     <title>Atoze-VONDELANT</title>
 </head>
 
@@ -21,7 +22,7 @@
     <div class="world content-container">
         <div class="info">
             <div class="image">
-                <img src="./img/wasseluare.png">
+                <img src="./img/vondelant.png">
             </div>
             <div class="prof">
                 <div class="title">
@@ -44,7 +45,7 @@
                                 <span>首都</span>
                                 <i></i>
                             </dt>
-                            <dd>エルクェト</dd>
+                            <dd>アルクェト</dd>
                         </dl>
                         <dl>
                             <dt>
@@ -76,41 +77,34 @@
         </div>
         <div class="characters">
             <div class="title">所属キャラ</div>
+            <div id="vondelant-main"></div>
+            <script>
+                setMembers('vondelant-main', [
+                    {
+                        name: 'サーク',
+                        url: '../character/3_sarc.html',
+                    },
+                    {
+                        name: 'ザキ',
+                        url: '../character/3_zhaki.html',
+                    },
+                    {
+                        name: 'エリス',
+                        url: '../character/3_eris.html',
+                    }
+                ]);
+            </script>
+            <div id="include-vondelant"></div>
+            <script>include('include-vondelant', './', 'vondelant_character.html');</script>
             <div class="members">
                 <div class="member">
                     <div class="name">
-                        <div class="image"><img src=""></div>
-                        サーク
-                    </div>
-                    <div class="profile"></div>
-                </div>
-                <div class="member">
-                    <div class="name">
-                        <div class="image"><img src=""></div>
-                        ザキ
-                    </div>
-                    <div class="profile"></div>
-                </div>
-                <div class="member">
-                    <div class="name">
-                        <div class="image"><img src=""></div>
-                        トゥエルケ
-                    </div>
-                    <div class="profile"></div>
-                </div>
-                <div class="member">
-                    <div class="name">
-                        <div class="image"><img src=""></div>
-                        アズラク
-                    </div>
-                    <div class="profile"></div>
-                </div>
-                <div class="member">
-                    <div class="name">
-                        <div class="image"><img src=""></div>
+                        <div class="image"></div>
                         リダ
                     </div>
-                    <div class="profile"></div>
+                    <div class="profile">
+                        ヴォンディラント王国の第二王子。
+                    </div>
                 </div>
             </div>
             <div class="group">
@@ -120,24 +114,30 @@
                 <div class="members">
                     <div class="member">
                         <div class="name">
-                            <div class="image"><img src=""></div>
+                            <div class="image"></div>
                             ハルブ
                         </div>
-                        <div class="profile"></div>
+                        <div class="profile">
+                            革命軍のリーダー。よく派手に酔っ払う。
+                        </div>
                     </div>
                     <div class="member">
                         <div class="name">
-                            <div class="image"><img src=""></div>
+                            <div class="image"></div>
                             ログス
                         </div>
-                        <div class="profile"></div>
+                        <div class="profile">
+                            新聞記者であり情報屋。
+                        </div>
                     </div>
                     <div class="member">
                         <div class="name">
-                            <div class="image"><img src=""></div>
+                            <div class="image"></div>
                             ジヴァル
                         </div>
-                        <div class="profile"></div>
+                        <div class="profile">
+                            東部出身者。アズラクに魅入られ無理やり革命軍に入れさせられた。
+                        </div>
                     </div>
                 </div>
             </div>

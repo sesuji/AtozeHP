@@ -1,17 +1,17 @@
 function header(rootDir) {
   directory = rootDir || '';
-  this.include('include-header', rootDir, 'include/header.html');
+  return this.include('include-header', rootDir, 'include/header.html');
 }
 
 function footer(rootDir) {
   directory = rootDir || '';
-  this.include('include-footer', rootDir, 'include/footer.html');
+  return this.include('include-footer', rootDir, 'include/footer.html');
 }
 
 function include(id, rootDir, directory) {
   rootDir = rootDir || '';
   directory = rootDir + directory;
-  $.get(directory, function (html) {
+  return $.get(directory, function (html) {
     html = html.replace(/\{\$root\}/g, rootDir);
     const element = document.getElementById(id);
     element.innerHTML = html;

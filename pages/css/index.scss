@@ -12,6 +12,12 @@ section {
     }
 }
 
+section#character {
+    margin: 0;
+    padding: 0;
+    height: 0;
+}
+
 section#about {
     h3::before {
         content: '◆';
@@ -39,6 +45,7 @@ section#about {
         background: red;
     }
     .header.invisible {
-        display: none;
+        // display: none;
+        // TODO: 一時的に消す
     }
 }

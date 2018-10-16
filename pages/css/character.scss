@@ -160,7 +160,7 @@
             &-main {
                 // font-size: 1.8rem;
                 // font-size: 6vw;
-                @include fz_vw(20); 
+                @include fz_vw(20);
                 font-weight: bold;
             }
             &-kana {}
@@ -418,6 +418,9 @@
     .specs__name-main {
         font-size: 1.8rem !important;
     }
+    .member {
+        flex-basis: 240px;
+    }
 }
 
 @media screen and (min-width: 940px) {
@@ -450,10 +453,6 @@
             width: 100%;
         }
     }
-    .member {
-        flex-basis: 240px;
-    }
-
     .dark {
         background-color: $dark !important;
         .character__img:after {

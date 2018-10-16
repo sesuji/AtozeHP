@@ -1,11 +1,40 @@
 @import "variables";
-.world-list {}
+.world-list {
+    .title-label {
+        font-size: 1.2rem;
+    }
+    .item {
+        a {
+            display: flex;
+            align-items: center;
+        }
+        margin: 16px 0;
+        &__image {
+            mix-blend-mode: multiply;
+            img {
+                height: 40px;
+            }
+        }
+        &__name-main {
+            font-size: 1rem;
+            font-weight: bold;
+        }
+        &__name-kana {
+            font-size: 0.8rem;
+        }
+        .world-list .item:last-child {
+            margin-bottom: 32px;
+        }
+    }
+}
 
 .fire {
     background-color: $fire !important;
 }
 
 .world {
+    position: relative;
+    z-index: -1;
     font-size: 0.8rem;
     .title {
         font-size: 1.2rem;
@@ -13,6 +42,7 @@
     .info {
         display: flex;
         flex-wrap: wrap;
+        background-color: $bg;
     }
     .prof {
         white-space: nowrap;
@@ -89,15 +119,6 @@
                         display: none; // TODO: 一時的
                     }
                 }
-                .member .profile::before {
-                    content: '';
-                    width: 100%;
-                    max-width: 200px;
-                    height: 4px;
-                    display: block;
-                    margin-right: auto;
-                    border-top: 1px dotted white;
-                }
             }
         }
         .members {
@@ -105,18 +126,27 @@
             flex-wrap: wrap;
         }
         .member {
-            margin: 0 16px;
+            margin: 8px 16px;
+            .profile::before {
+                content: '';
+                width: 100%;
+                max-width: 200px;
+                height: 4px;
+                display: block;
+                margin-right: auto;
+                border-top: 1px dotted white;
+            }
             .name {
                 display: inline-block;
                 text-align: center;
             }
             .image {
+                display: none; //TODO: 一時的
                 position: relative;
                 img {
                     width: 60px;
                     height: 60px;
-                    border-radius: 50%;
-                    // background-color: rgba(255, 255, 255, 0.75);
+                    border-radius: 50%; // background-color: rgba(255, 255, 255, 0.75);
                 }
             }
             .description {}
@@ -127,5 +157,8 @@
 @media screen and (max-width: $break-point) {
     br {
         display: none;
+    }
+    .member {
+        // width: 100%;
     }
 }

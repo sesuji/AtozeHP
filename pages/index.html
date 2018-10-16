@@ -9,21 +9,21 @@
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="include/include.js"></script>
     <script src="./js/base.js"></script>
+    <script src="./js/index.js"></script>
     <title>Atoze</title>
 </head>
 
 <body class="body" id="body">
     <!-- HEADER -->
     <div id="include-header"></div>
-    <script>header();</script>
+    <script>header().then(() => { controllHeader() })</script>
     <!-- CONTENT -->
     <div class="content">
         <section id="top">
             <h2>TOP</h2>
         </section>
         <section id="character">
-            <h2>CHARACTER</h2>
-            
+            <!--<h2>CHARACTER</h2>-->
         </section>
         <section id="about">
             <h2>ABOUT</h2>
@@ -59,6 +59,6 @@
     <!-- FOOTER -->
     <div id="include-footer"></div>
     <script>footer();</script>
-    <script src="./js/index.js"></script>
 </body>
+
 </html>

@@ -523,6 +523,10 @@
   .specs__name-main {
     font-size: 1.8rem !important;
   }
+  .member {
+    -ms-flex-preferred-size: 240px;
+        flex-basis: 240px;
+  }
 }
 
 @media screen and (min-width: 940px) {
@@ -560,10 +564,6 @@
   }
   .character > * {
     width: 100%;
-  }
-  .member {
-    -ms-flex-preferred-size: 240px;
-        flex-basis: 240px;
   }
   .dark {
     background-color: #646464 !important;

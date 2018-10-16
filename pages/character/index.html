@@ -9,6 +9,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
     <script src="../js/character_list_variables.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="../js/generate_member.js"></script>
     <script src="../js/character_list.js"></script>
     <script src="../include/include.js"></script>
     <script src="../js/base.js"></script>
@@ -28,9 +29,11 @@
         <div class="list" id="second">
             <div class="title-label">2章</div>
         </div>
+        <!--
         <div class="list" id="second_another">
             <div class="title-label">2章外伝</div>
         </div>
+        -->
         <div class="list" id="third">
             <div class="title-label">3章</div>
         </div>
@@ -40,12 +43,15 @@
         <div class="list" id="fifth">
             <div class="title-label">5章</div>
         </div>
-        <div class="title-label">フローヴァトゥス</div>
+        <div class="title-label"><a href="../world/frovatus.html">フローヴァトゥス</a></div>
         <div id="include-frovatus"></div>
         <script>include('include-frovatus', '../world/', 'frovatus_character.html');</script>
-        <div class="title-label">ヴァッセリュアーレ</div>
+        <div class="title-label"><a href="../world/wasseluare.html">ヴァッセリュアーレ</a></div>
         <div id="include-wasseluare"></div>
         <script>include('include-wasseluare', '../world/', 'wasseluare_character.html');</script>
+        <div class="title-label"><a href="../world/vondelant.html">ヴォンディラント</a></div>
+        <div id="include-vondelant"></div>
+        <script>include('include-vondelant', '../world/', 'vondelant_character.html');</script>
     </div>
     <!-- SIDE -->
     <!-- FOOTER -->
