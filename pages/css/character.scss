@@ -97,13 +97,6 @@
     position: relative;
     z-index: -1;
     height: 100%;
-    >:last-child::after {
-        content: '';
-        position: relative;
-        top: 100%;
-        width: 100%;
-        height: 70px;
-    }
     >* {
         position: relative;
         top: -100px;
@@ -460,7 +453,7 @@
         }
     }
     .light {
-        background-color: $thunder;
+        background-color: $light;
         .character__img:after {
             background: linear-gradient(to top, $light 15%, $light-alpha 50%);
         }

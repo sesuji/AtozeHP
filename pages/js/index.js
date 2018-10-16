@@ -41,3 +41,29 @@ function controllHeader() {
         }
     }
 }
+
+function adjustFrameCss(id) {
+    if (document.getElementById(id)) {
+        const frameElement = document.getElementById(id);
+        const contentWindow = frameElement.contentWindow.document.documentElement;
+        var height = 100;
+        if (document.all) {
+            height = contentWindow.scrollHeight;
+        } else {
+            height = contentWindow.offsetHeight;
+        }
+        frameElement.style.height = height + "px";
+    }
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+    checkOS();
+});
+
+
+function checkOS() {
+    const iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+    if (iOS) {
+        document.getElementById('iframe').className += ' ' + 'ios';
+    }
+}

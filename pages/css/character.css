@@ -24,8 +24,8 @@
 }
 
 .light .character__img:after {
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(30%, #dcdcc8), color-stop(60%, rgba(200, 200, 200, 0)));
-  background: linear-gradient(to top, #dcdcc8 30%, rgba(200, 200, 200, 0) 60%);
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(30%, #dcdcc8), color-stop(60%, rgba(220, 220, 200, 0)));
+  background: linear-gradient(to top, #dcdcc8 30%, rgba(220, 220, 200, 0) 60%);
 }
 
 .light .character .specs__name {
@@ -108,14 +108,6 @@
   position: relative;
   z-index: -1;
   height: 100%;
-}
-
-.character > :last-child::after {
-  content: '';
-  position: relative;
-  top: 100%;
-  width: 100%;
-  height: 70px;
 }
 
 .character > * {
@@ -573,11 +565,11 @@
     background: linear-gradient(to top, #646464 15%, rgba(100, 100, 100, 0) 50%);
   }
   .light {
-    background-color: #ccc22d;
+    background-color: #dcdcc8;
   }
   .light .character__img:after {
-    background: -webkit-gradient(linear, left bottom, left top, color-stop(15%, #dcdcc8), color-stop(50%, rgba(200, 200, 200, 0)));
-    background: linear-gradient(to top, #dcdcc8 15%, rgba(200, 200, 200, 0) 50%);
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(15%, #dcdcc8), color-stop(50%, rgba(220, 220, 200, 0)));
+    background: linear-gradient(to top, #dcdcc8 15%, rgba(220, 220, 200, 0) 50%);
   }
   .fire {
     background-color: #911414;

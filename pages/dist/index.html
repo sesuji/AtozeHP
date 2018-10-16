@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <base href="/dist/">
+  <link href="styles.1df649f68b0744decf2d.bundle.css" rel="stylesheet" />
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+</head>
+
+<body>
+  <app-root></app-root>
+  <script type="text/javascript" src="inline.1e32d52aa00697a3e4fc.bundle.js"></script>
+  <script type="text/javascript" src="polyfills.f20484b2fa4642e0dca8.bundle.js"></script>
+  <script type="text/javascript" src="scripts.1aa37dafea7883fc30f9.bundle.js"></script>
+  <script type="text/javascript" src="main.6744125b79506d69132f.bundle.js"></script>
+  <script>
+    const userAgent = window.navigator.userAgent.toLowerCase();
+    const appVersion = window.navigator.appVersion.toLowerCase();
+    $(window).bind("load resize", function () {
+      const width = $(window).width();
+      if (width <= 415) {
+        $("html").css("zoom", width / 415);
+        if (appVersion.indexOf("msie 9.") != -1) {
+          $("html").css("-ms-transform", "scale(" + width / 415 + ")").css("-ms-transform-origin", "0 0");
+          $("body").css("overflow-x", "hidden");
+        } else if (userAgent.indexOf('gecko') != -1) {
+          $("html").css("-moz-transform", "scale(" + width / 415 + ")").css("-moz-transform-origin", "0 0");
+          $("body").css("overflow-x", "hidden");
+        }
+      }
+    });
+  </script>
+</body>
+
+</html>

@@ -10,6 +10,20 @@ section .section-content-body {
   margin: 6px;
 }
 
+.iframe-container {
+  width: 100%;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch !important;
+}
+
+.iframe-container.ios {
+  width: 150%;
+  -webkit-transform: scale(0.7);
+          transform: scale(0.7);
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+}
+
 section#character {
   margin: 0;
   padding: 0;
@@ -29,14 +43,14 @@ section#about h3 {
 }
 
 @media screen and (max-width: 640px) {
-  section {
-    height: 100vh;
-  }
   section .section-content {
     font-size: 14px;
   }
   section .section-content-title {
     font-size: 16px;
+  }
+  section:last-child {
+    height: calc(100vh - 96px);
   }
   #character {
     background: red;
