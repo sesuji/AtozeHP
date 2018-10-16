@@ -1,0 +1,43 @@
+body {
+    font-family: meiryo , sans-serif;
+    font-size: 100%;
+    color: #666;
+}
+
+.post_mrstunit_typebar.water {
+    background-color: #88CCFB;
+}
+
+.post_mrstunit_typebar.dark {
+    background-color: #C391EA;
+}
+
+.post_mrstunit_typebar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 99%;
+    height: 28px;
+}
+
+div {
+    display: block;
+}
+
+.post_mrst_unitarchives {
+    width: 50%;
+    display: block;
+    float: left;
+    margin-top: 6px;
+}
+
+.post_mrstunit_title {
+    position: absolute;
+    height: 30px;
+    left: 2px;
+    top: 2px;
+    width: calc(100% - 2px);
+    font-size: 80%;
+    text-shadow: 0 0 3px #FFFFFF, 0 0 6px #FFFFFF, 0 0 9px #FFFFFF;
+    overflow: hidden;
+}

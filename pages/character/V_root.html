@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ja" class="">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../css/character.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="../include/include.js"></script>
+    <script src="../js/base.js"></script>
+    <title>Atoze-</title>
+</head>
+
+<body class="body" id="body">
+    <!-- HEADER -->
+    <div id="include-header"></div>
+    <script>header('../');</script>
+    <!-- CONTENT -->
+    <div id="include-character"></div>
+    <script src="../js/character.js"></script>
+    <script>
+        const character = {
+            id: '',
+            element_id: 'water',
+            image: './img/root.png',
+            name_main: 'ルート・ティロンド',
+            name_kana: 'Root=Tirond',
+            quote: '',
+            spec_l: [
+                {
+                    name: '属性',
+                    value: '水'
+                }, {
+                    id: 'age',
+                    name: '年齢',
+                    value: ''
+                }, {
+                    name: '職業',
+                    value: '研究者'
+                },
+            ],
+            spec_r: [
+                {
+                    name: '武器',
+                    value: ''
+                },
+                {
+                    name: '所属',
+                    value: 'ヴォンディラント'
+                },
+                {
+                    name: '種族',
+                    value: '人間'
+                },
+            ],
+            profile: '',
+            talk: [
+                {
+                    name: '',
+                    value: '',
+                    // icon: './img/_ico.png',
+                    isRight: false
+                },
+            ],
+            pictures: []
+        }
+        include('include-character', './', 'base_character.html')
+            .then(() => {
+                generateCharacterStatus(character);
+            });
+    </script>
+    <!-- SIDE -->
+    <!-- FOOTER -->
+    <div id="include-footer"></div>
+    <script>footer('../');</script>
+</body>
+
+</html>

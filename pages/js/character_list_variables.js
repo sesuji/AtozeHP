@@ -154,7 +154,7 @@ const fourth = [
         name: 'マルシュアース',
         // img: './img/marthearth_ico.png',
         // url: '4_marthearth.html',
-        profile: 'ゴーレム。もっとも機動力が高いプロトタイプ。'
+        profile: 'ゴーレム。もっとも機動力が高い。'
     }, {
         name: 'クロック・オクロック',
         // img: './img/oclock_ico.png',
