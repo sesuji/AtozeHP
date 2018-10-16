@@ -135,6 +135,7 @@ footer .footer_copyright {
   position: relative;
   padding-left: 25px;
   margin-bottom: 24px;
+  z-index: -1;
 }
 
 .title-label:before {
