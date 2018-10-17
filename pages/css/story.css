@@ -1,0 +1,22 @@
+.story .title-label {
+  padding-top: 16px;
+}
+
+.story .author {
+  font-size: 0.75rem;
+  margin-left: 32px;
+}
+
+.story .text {
+  font-size: 0.8rem;
+  background-color: rgba(255, 255, 255, 0.75);
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.story .text pre {
+  white-space: pre-wrap;
+  line-height: 0.9rem;
+  font-size: 1rem;
+}
+/*# sourceMappingURL=story.css.map */

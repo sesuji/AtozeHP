@@ -117,6 +117,10 @@
   padding: 12px;
 }
 
+.character .top {
+  top: 0;
+}
+
 .character .img {
   top: 0;
   margin: 0;
@@ -125,7 +129,9 @@
 }
 
 .character__img {
-  width: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   min-width: 320px;
   min-height: 160px;
   position: relative;
@@ -155,6 +161,8 @@
 }
 
 .character .specs {
+  position: relative;
+  top: -100px;
   margin: 0 auto;
   margin: 0 10px;
   min-width: 0;
@@ -529,6 +537,11 @@
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     height: auto;
+  }
+  .character .top {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
   .character .img {
     width: auto;

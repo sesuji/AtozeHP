@@ -28,15 +28,17 @@ a {
 header {
   font-family: 'header';
   position: fixed;
-  width: calc(100% - 30px);
-  top: 15px;
-  left: 15px;
+  width: 100%;
+  padding: 12px;
+  top: 0px;
+  left: 0px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 header a {
@@ -62,7 +64,7 @@ nav {
 }
 
 nav ul {
-  margin-right: 12px;
+  margin-right: 16px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -85,7 +87,7 @@ nav li + li {
 }
 
 .content-container {
-  margin: 60px 20px 40px;
+  margin: 80px 20px 40px;
 }
 
 .content-container:last-of-type::after {
@@ -166,7 +168,9 @@ footer .footer_copyright {
     text-shadow: initial;
   }
   .menu-trigger-container {
-    margin-left: auto;
+    position: fixed;
+    right: 12px;
+    top: 12px;
     z-index: 1200;
   }
   .menu-trigger,

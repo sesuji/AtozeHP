@@ -103,6 +103,9 @@
         margin: 0 12px;
         padding: 12px;
     }
+    .top {
+        top: 0;
+    }
     .img {
         top: 0;
         margin: 0;
@@ -110,7 +113,7 @@
         border-bottom: initial;
     }
     &__img {
-        width: 100%;
+        flex: 1;
         min-width: 320px;
         min-height: 160px;
         position: relative;
@@ -135,8 +138,10 @@
         }
     }
     .specs {
+        position: relative;
+        top: -100px;
         margin: 0 auto;
-        margin: 0 10px;
+        margin: 0 10px; // flex: 1;
         min-width: 0;
         max-width: 600px;
         padding-bottom: 0;
@@ -418,6 +423,9 @@
 
 @media screen and (min-width: 940px) {
     .character {
+        .top {
+            display: flex;
+        }
         display: flex;
         flex-wrap: wrap;
         height: auto;
