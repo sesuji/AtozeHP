@@ -24,6 +24,7 @@ a {
 }
 
 header {
+    z-index: 999;
     font-family: 'header'; // font-family: 'header', "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
     position: fixed; // width: calc(100% - 30px);
     width: 100%;
@@ -54,6 +55,7 @@ nav {
 }
 
 .logo {
+    z-index: 1100;
     font-size: 2rem;
 }
 
@@ -129,7 +131,6 @@ footer .footer_copyright {
     position: relative;
     padding-left: 25px;
     margin-bottom: 24px;
-    z-index: -1;
     &:before {
         position: absolute;
         content: "";

@@ -28,10 +28,8 @@ function generateCharacterList(list) {
         // プロフィール
         const profile = generateDivElement('profile');
         if (chara.profile) {
-            name.style.paddingBottom = '4px';
-            profile.style.textAlign = 'center';
-            profile.style.borderTop = 'dotted 1px #fff';
-            profile.style.paddingTop = '4px';
+            // name.style.borderBottom = 'dotted 1px #fff';
+            profile.className += ' ' + 'texted';
             profile.appendChild(document.createTextNode(chara.profile));
         }
         //　リンク

@@ -14,6 +14,9 @@
 }
 
 .dark {
+    header {
+        background-color: rgba(0, 0, 0, 0);
+    }
     background-color: $dark !important;
     .character__img:after {
         background: linear-gradient(to top, $dark 30%, $dark-alpha 60%);
@@ -21,9 +24,12 @@
 }
 
 .light {
+    header {
+        background-color: rgba(0, 0, 0, 0);
+    }
     background-color: $light;
     .character {
-        color: black !important;
+        color: rgb(194, 125, 125) !important;
         &__img:after {
             background: linear-gradient(to top, $light 30%, $light-alpha 60%);
         }
@@ -39,6 +45,9 @@
 }
 
 .fire {
+    header {
+        background-color: rgba(0, 0, 0, 0);
+    }
     background-color: $fire;
     .character__img:after {
         background: linear-gradient(to top, $fire 30%, $fire-alpha 60%);
@@ -46,6 +55,9 @@
 }
 
 .wind {
+    header {
+        background-color: rgba(0, 0, 0, 0);
+    }
     background-color: $wind;
     .character__img:after {
         background: linear-gradient(to top, $wind 30%, $wind-alpha 60%);
@@ -53,6 +65,9 @@
 }
 
 .water {
+    header {
+        background-color: rgba(0, 0, 0, 0);
+    }
     background-color: $water;
     .character__img:after {
         background: linear-gradient(to top, $water 30%, $water-alpha 60%);
@@ -60,6 +75,9 @@
 }
 
 .ice {
+    header {
+        background-color: rgba(0, 0, 0, 0);
+    }
     background-color: $ice;
     .character__img:after {
         background: linear-gradient(to top, $ice 30%, $ice-alpha 60%);
@@ -67,6 +85,9 @@
 }
 
 .earth {
+    header {
+        background-color: rgba(0, 0, 0, 0);
+    }
     background-color: $earth;
     .character__img:after {
         background: linear-gradient(to top, $earth 30%, $earth-alpha 60%);
@@ -74,6 +95,9 @@
 }
 
 .thunder {
+    header {
+        background-color: rgba(0, 0, 0, 0);
+    }
     background-color: $thunder;
     .character {
         color: black !important;
@@ -95,9 +119,10 @@
     color: rgb(255, 255, 255);
     margin: 0;
     position: relative;
-    z-index: -1;
+    z-index: 1;
     height: 100%;
     >* {
+        z-index: 1;
         position: relative;
         top: -100px;
         margin: 0 12px;
@@ -319,7 +344,7 @@
     }
     font-size: 0.8rem;
     position: relative;
-    z-index: -1;
+    z-index: 1;
     .group {
         .label {
             display: inline-block;
@@ -386,6 +411,16 @@
         }
         .profile {
             text-align: left !important;
+            &.texted {
+                margin-left: -12px;
+                margin-top: 4px;
+                text-align: center;
+                border: dotted 3px rgba(255, 255, 255, 0.75);
+                background-color: rgba(255, 255, 255, 0.75);
+                padding: 12px;
+                border-radius: 12px;
+                font-size: 0.75rem;
+            }
         }
     }
 }

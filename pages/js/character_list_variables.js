@@ -168,7 +168,7 @@ const fourth = [
     }, {
         name: 'エリザヴェート',
         // img: './img/elisabeth_ico.png',
-        // url: '4_elisabeth.html',
+        url: '4_elisabeth.html',
     }, {
         name: 'バク・ジュッラーレ',
         // img: './img/baku_ico.png',

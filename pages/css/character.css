@@ -10,6 +10,10 @@
   background-color: #646464 !important;
 }
 
+.dark header {
+  background-color: rgba(0, 0, 0, 0);
+}
+
 .dark .character__img:after {
   background: -webkit-gradient(linear, left bottom, left top, color-stop(30%, #646464), color-stop(60%, rgba(100, 100, 100, 0)));
   background: linear-gradient(to top, #646464 30%, rgba(100, 100, 100, 0) 60%);
@@ -19,8 +23,12 @@
   background-color: #dcdcc8;
 }
 
+.light header {
+  background-color: rgba(0, 0, 0, 0);
+}
+
 .light .character {
-  color: black !important;
+  color: #c27d7d !important;
 }
 
 .light .character__img:after {
@@ -40,6 +48,10 @@
   background-color: #911414;
 }
 
+.fire header {
+  background-color: rgba(0, 0, 0, 0);
+}
+
 .fire .character__img:after {
   background: -webkit-gradient(linear, left bottom, left top, color-stop(30%, #911414), color-stop(60%, rgba(145, 20, 20, 0)));
   background: linear-gradient(to top, #911414 30%, rgba(145, 20, 20, 0) 60%);
@@ -47,6 +59,10 @@
 
 .wind {
   background-color: seagreen;
+}
+
+.wind header {
+  background-color: rgba(0, 0, 0, 0);
 }
 
 .wind .character__img:after {
@@ -58,6 +74,10 @@
   background-color: #145591;
 }
 
+.water header {
+  background-color: rgba(0, 0, 0, 0);
+}
+
 .water .character__img:after {
   background: -webkit-gradient(linear, left bottom, left top, color-stop(30%, #145591), color-stop(60%, rgba(20, 85, 145, 0)));
   background: linear-gradient(to top, #145591 30%, rgba(20, 85, 145, 0) 60%);
@@ -65,6 +85,10 @@
 
 .ice {
   background-color: #145591;
+}
+
+.ice header {
+  background-color: rgba(0, 0, 0, 0);
 }
 
 .ice .character__img:after {
@@ -76,6 +100,10 @@
   background-color: sienna;
 }
 
+.earth header {
+  background-color: rgba(0, 0, 0, 0);
+}
+
 .earth .character__img:after {
   background: -webkit-gradient(linear, left bottom, left top, color-stop(30%, sienna), color-stop(60%, rgba(160, 82, 45, 0)));
   background: linear-gradient(to top, sienna 30%, rgba(160, 82, 45, 0) 60%);
@@ -83,6 +111,10 @@
 
 .thunder {
   background-color: #ccc22d;
+}
+
+.thunder header {
+  background-color: rgba(0, 0, 0, 0);
 }
 
 .thunder .character {
@@ -106,11 +138,12 @@
   color: white;
   margin: 0;
   position: relative;
-  z-index: -1;
+  z-index: 1;
   height: 100%;
 }
 
 .character > * {
+  z-index: 1;
   position: relative;
   top: -100px;
   margin: 0 12px;
@@ -389,7 +422,7 @@
 .characters {
   font-size: 0.8rem;
   position: relative;
-  z-index: -1;
+  z-index: 1;
 }
 
 .characters > * {
@@ -483,6 +516,17 @@
 
 .characters .member .profile {
   text-align: left !important;
+}
+
+.characters .member .profile.texted {
+  margin-left: -12px;
+  margin-top: 4px;
+  text-align: center;
+  border: dotted 3px rgba(255, 255, 255, 0.75);
+  background-color: rgba(255, 255, 255, 0.75);
+  padding: 12px;
+  border-radius: 12px;
+  font-size: 0.75rem;
 }
 
 .list img {
