@@ -41,3 +41,44 @@ WebFont.load({
     */
   },
 });
+
+function generateCommonHeader(baseUrl) {
+  importCSS(baseUrl + "/css/style.css");
+  return this.importScript(baseUrl + 'include/include.js', function () {
+    const body = document.getElementsByTagName('body')[0];
+    const headerEl = document.createElement('div');
+    headerEl.id = "include-header";
+    body.insertBefore(headerEl, body.firstChild);
+    header('../');
+
+    const footerEl = document.createElement('div');
+    footerEl.id = "include-footer";
+    body.append(footerEl);
+    footer('../');
+  })
+}
+
+function loadError(oError) {
+  throw new URIError("The script " + oError.target.src + " is not accessible.");
+}
+
+function importScript(sSrc, fOnload) {
+  const oScript = document.createElement("script");
+  oScript.type = "text\/javascript";
+  oScript.src = sSrc;
+  oScript.onerror = loadError;
+  if (fOnload) { oScript.onload = fOnload; }
+  document.getElementsByTagName("head")[0].appendChild(oScript);
+  return oScript;
+}
+
+function importCSS(hHref, fOnload) {
+  const link = document.createElement("link");
+  link.rel = "stylesheet";
+  link.type = "text\/css";
+  link.href = hHref;
+  link.onerror = loadError;
+  if (fOnload) { link.onload = fOnload; }
+  document.getElementsByTagName("head")[0].appendChild(link);
+  return link;
+}

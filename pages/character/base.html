@@ -1,25 +1,24 @@
 <!DOCTYPE html>
-<html lang="ja" class="">
+<html lang="ja">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
-    <link rel="stylesheet" type="text/css" href="../css/style.css">
-    <link rel="stylesheet" type="text/css" href="../css/character.css">
     <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script src="../include/include.js"></script>
     <script src="../js/base.js"></script>
+    <script>
+        generateCommonHeader('../').addEventListener('load', function () {
+            // ここにそれぞれの記述
+            importScript('../js/character.js', function () {
+                characterLoaded();
+            });
+        });
+    </script>
     <title>Atoze-</title>
 </head>
 
 <body class="body" id="body">
-    <!-- HEADER -->
-    <div id="include-header"></div>
-    <script>header('../');</script>
-    <!-- CONTENT -->
-    <div id="include-character"></div>
-    <script src="../js/character.js"></script>
     <script>
         const character = {
             id: '',
@@ -66,15 +65,7 @@
             ],
             pictures: []
         }
-        include('include-character', './', 'base_character.html')
-            .then(() => {
-                generateCharacterStatus(character);
-            });
     </script>
-    <!-- SIDE -->
-    <!-- FOOTER -->
-    <div id="include-footer"></div>
-    <script>footer('../');</script>
 </body>
 
 </html>

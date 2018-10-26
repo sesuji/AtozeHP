@@ -14,6 +14,20 @@ window.onload = function () {
 // generateCharacterStatus();
 // });
 
+function characterLoaded() {
+    this.importCSS("../css/character.css");
+
+    const body = document.getElementsByTagName('body')[0];
+    const contentEl = document.createElement('div');
+    contentEl.id = "include-character";
+    body.insertBefore(contentEl, body.lastChild);
+    
+    this.include('include-character', './', 'base_character.html')
+        .then(() =>
+            generateCharacterStatus(character)
+        );
+}
+
 function generateCharacterStatus(chara) {
     if (chara.element_id) {
         const html = document.getElementsByTagName('html')[0];
@@ -81,7 +95,7 @@ function createSpecElement(id, name, value) {
     if (id) {
         dl.id = id;
     }
-    
+
     const dt = document.createElement('dt');
     const span = document.createElement('span');
     span.appendChild(document.createTextNode(name));
@@ -120,4 +134,3 @@ function createTalkElement(name, text, icon, isRight = false) {
     talk.appendChild(textEl);
     return talk;
 }
-
